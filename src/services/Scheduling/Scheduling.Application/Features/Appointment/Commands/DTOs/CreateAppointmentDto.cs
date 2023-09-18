@@ -1,6 +1,8 @@
-﻿namespace Scheduling.Application.Features.Appointment.Commands.DTOs;
+﻿using Scheduling.Application.Features.Common.DTOs;
 
-public class CreateAppointmentDto
+namespace Scheduling.Application.Features.Appointment.Commands.DTOs;
+
+public class CreateAppointmentDto : BaseCommandDto
 {
     public string? Subject { get; set; }
 }

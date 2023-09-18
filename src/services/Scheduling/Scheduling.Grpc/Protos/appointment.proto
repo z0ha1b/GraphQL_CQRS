@@ -1,0 +1,18 @@
+﻿syntax = "proto3";
+
+option csharp_namespace = "Scheduling.Grpc";
+
+package appointment;
+
+service Appointment {
+  rpc CreateAppointment(CreateAppointmentRequest) returns (CreateAppointmentResponse){}
+}
+
+message CreateAppointmentRequest {
+  string subject = 1;
+  string createdBy = 2;
+}
+
+message CreateAppointmentResponse{
+  int64 id = 1;
+}
