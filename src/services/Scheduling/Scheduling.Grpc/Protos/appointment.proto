@@ -2,10 +2,18 @@
 
 option csharp_namespace = "Scheduling.Grpc";
 
+
+import "google/api/annotations.proto";
+
 package appointment;
 
 service Appointment {
-  rpc CreateAppointment(CreateAppointmentRequest) returns (CreateAppointmentResponse){}
+  rpc CreateAppointment(CreateAppointmentRequest) returns (CreateAppointmentResponse){
+  option(google.api.http) = {
+	  post: "/v1/createappointment",
+	  body: "*"
+    };
+  }
 }
 
 message CreateAppointmentRequest {

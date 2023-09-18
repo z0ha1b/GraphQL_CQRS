@@ -9,7 +9,7 @@ var configuration = builder.Configuration;
 builder.Services.AddApplicationServices();
 builder.Services.AddInfrastructureServices(configuration);
 
-builder.Services.AddGrpc();
+builder.Services.AddGrpc().AddJsonTranscoding();
 
 var app = builder.Build();
 
